@@ -6,74 +6,53 @@
 <title>JumperTeOdia · Gaming, anime y entretenimiento</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#07040a;--panel:#14080f;--line:#4a1228;--red:#ff1744;--rose:#ff5c7a;--text:#f6eef1;--muted:#b49aa5}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font:400 17px/1.6 Barlow,system-ui,sans-serif}
-h1,h2,h3{font-family:'Barlow Condensed',Impact,sans-serif;font-style:italic;font-weight:800;line-height:1}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
-.hero img{display:block;width:100%;height:auto}
-.links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding:22px 16px;background:var(--panel);border-bottom:1px solid var(--line)}
-.btn{display:inline-block;padding:12px 26px;border:2px solid var(--red);border-radius:999px;text-decoration:none;font-weight:500;transition:background .2s}
-.btn:hover{background:var(--red)}
-.btn.main{background:var(--red)}
-main{max-width:1000px;margin:0 auto;padding:0 20px}
-section{padding:64px 0 0}
-h2{font-size:clamp(2.2rem,6vw,3.4rem);margin-bottom:20px}
-p{max-width:60ch;color:var(--muted)}
-.series{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:8px}
-.series article{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--red);padding:20px}
-.series h3{font-size:1.7rem;margin-bottom:8px}
-.series p{font-size:.95rem}
-.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.videos a{display:block;padding:44px 20px;text-align:center;background:var(--panel);border:1px dashed var(--line);text-decoration:none;color:var(--muted)}
-.videos a:hover{border-color:var(--red);color:var(--text)}
-.discord{margin-top:64px;padding:40px 24px;text-align:center;border:1px solid var(--red);background:linear-gradient(180deg,#2a0a17,var(--panel))}
-.discord p{margin:0 auto 20px}
-footer{margin-top:64px;padding:28px 16px;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero"><img src="BannerTeto.png" alt="JumperTeOdia: gaming, anime y entretenimiento. Bienvenido a mi mundo"></header>
+
+<header class="hero">
+  <img src="BannerTeto.png" alt="JumperTeOdia: gaming, anime y entretenimiento">
+</header>
+
 <nav class="links" aria-label="Mis redes">
   <a class="btn main" href="https://www.tiktok.com/@jumpiteodia" target="_blank" rel="noopener">TikTok</a>
   <a class="btn" href="https://www.youtube.com/@JumpiTeOdia" target="_blank" rel="noopener">YouTube</a>
   <a class="btn" href="https://discord.gg/wE65eaHNh" target="_blank" rel="noopener">Discord</a>
   <a class="btn" href="https://github.com/AngelHuaman13/ProyectoTeto" target="_blank" rel="noopener">GitHub</a>
 </nav>
+
+<section class="presentacion">
+  <img src="Logo/Teto1.jpg" alt="Avatar de JumperTeOdia">
+  <div>
+    <h1>JumperTeOdia</h1>
+    <p>Subo mis partidas de League of Legends y eFootball, mis retos y todo lo que me divierte del gaming y el anime. Aquí tienes mis videos ordenados para que encuentres lo que buscas.</p>
+    <div class="etiquetas">
+      <span>League of Legends</span>
+      <span>eFootball</span>
+      <span>Anime</span>
+    </div>
+  </div>
+</section>
+
 <main>
-<section id="sobre-mi">
-  <h2>Hola, soy Jumper</h2>
-  <p>Juego, subo clasificatorias y me divierto con lo que me gusta: League of Legends, eFootball y anime. Aquí tienes mis series de videos en orden, para que no te pierdas nada.</p>
+  <section id="videos">
+  <h2>Mis videos</h2>
+  <input id="buscador" type="search" placeholder="Buscar un video o una serie" aria-label="Buscar videos">
+  <div id="categorias" class="filtros" role="group" aria-label="Filtrar por categoría"></div>
+  <div id="lista"></div>
+  <p id="vacio" class="vacio" hidden>No encontré ningún video con esa búsqueda.</p>
 </section>
 
-<section id="series">
-  <h2>Mis series</h2>
-  <div class="series">
-    <article><h3>Ruta a Maestro</h3><p>De Oro IV a Diamante 2 y Maestro en LoL, con los tips que me llevaron ahí.</p></article>
-    <article><h3>Reto Día 1, 2, 3</h3><p>El reto en LoL, día por día.</p></article>
-    <article><h3>eFootball</h3><p>DT del Real Madrid, ascenso de división y la selección de Perú.</p></article>
-    <article><h3>Otros juegos</h3><p>Marvel Rivals, Left 4 Dead 2, Honeyboom y más.</p></article>
-    <article><h3>Eventos y Teto</h3><p>Noche de Máscaras de Halloween, JMMP King y contenido de Teto.</p></article>
-  </div>
-</section>
-
-<section id="videos">
-  <h2>Últimos videos</h2>
-  <div class="videos">
-    <a href="https://www.tiktok.com/@jumpiteodia" target="_blank" rel="noopener">Ver mis videos en TikTok</a>
-    <a href="https://www.youtube.com/@JumpiTeOdia" target="_blank" rel="noopener">Ver mi canal de YouTube</a>
-  </div>
-</section>
-
-<section class="discord" id="comunidad">
-  <h2>Únete a la comunidad</h2>
-  <p>Chatea conmigo, juega con otros y entérate primero de los directos.</p>
-  <a class="btn main" href="https://discord.gg/wE65eaHNh" target="_blank" rel="noopener">Entrar al Discord</a>
-</section>
+  <section class="discord" id="comunidad">
+    <h2>Únete a la comunidad</h2>
+    <p>Chatea conmigo, juega con otros y entérate primero de los directos.</p>
+    <a class="btn main" href="https://discord.gg/wE65eaHNh" target="_blank" rel="noopener">Entrar al Discord</a>
+  </section>
 </main>
+
 <footer>© 2026 JumperTeOdia · Gracias por tu apoyo</footer>
+
+<script src="videos.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
